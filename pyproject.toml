@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vaultzero"
+version = "1.0.0"
+description = "Zero-knowledge encrypted vault with a forward-secure ratchet"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Konain Sultan Khan", email = "kkdev9715@gmail.com" }]
+keywords = ["encryption", "zero-knowledge", "x25519", "aes-gcm", "ratchet"]
+dependencies = ["cryptography>=41"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/kkcyber2/vaultzero"
+Repository = "https://github.com/kkcyber2/vaultzero"
+
+[tool.setuptools.packages.find]
+include = ["vaultzero*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
